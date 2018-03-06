@@ -11,7 +11,7 @@
 
 | No | 名称 | No | 名称 |
 |:-----:|:-----|:-----:|:-----|
-|1|CAMERAコネクタ|2|USB Bootモード設定用 3PINコネクタ|
+|1|CAMERAコネクタ|2|USB micro-B 書込み設定用 3PINコネクタ|
 |3|シャットダウン LED |4|ステータス LED |
 |5|電源 LED|6|内部配線用 LED接続7PIN ZHコネクタ|
 |7|USB Type A コネクタ|8|電源 ON / OFF 用スイッチ|
@@ -28,10 +28,10 @@
 
 Raspberry-pi標準のCAMERAモジュール接続用15pin FFCコネクタ。
 
-### 1-2. USB Bootモード設定用 3PINコネクタ
+### 1-2. USB micro-B 書込み設定用 3PINコネクタ
 ![2](/Image/Board_pic/cm3mb3_02.png)
 
-USB micro-Bからのブートを有効にすることができます。<br>
+有効にした場合、USB micro-BからCompute Module3(※eMMCあり)の書込みが可能となります。<br>
 1番-2番 ショート: 有効<br>
 2番-3番 ショート: 無効<br>
 
@@ -141,7 +141,7 @@ HDMI Std. Aコネクタ。<br>
 ### 1-15. USB micro-Bコネクタ
 ![15](/Image/Board_pic/cm3mb3_15.png)
 
-USB2.0ホストコネクタ。
+「USB micro-B 書込み設定用 3PINコネクタ」が有効設定の場合、本ポートからCompute Module3(※eMMCあり)の書込みが可能となります。
 
 ### 1-16. USB Type A コネクタ
 ![16](/Image/Board_pic/cm3mb3_16.png)
