@@ -26,7 +26,7 @@
 ### 1-1. CAMERAコネクタ
 ![1](/Image/Board_pic/cm3mb3_01.png)
 
-Raspberry-pi標準のCAMERAモジュール接続用15pin FFCコネクタ。
+Raspberry-pi標準のCAMERAモジュール接続用15pin CSIコネクタ。
 
 ### 1-2. USB micro-B 書込み設定用 3PINコネクタ
 ![2](/Image/Board_pic/cm3mb3_02.png)
@@ -124,7 +124,7 @@ USB2.0ホストコネクタ(1ポート)。
 ### 1-12. DISPLAYコネクタ
 ![12](/Image/Board_pic/cm3mb3_12.png)
 
-Raspberry-pi標準のタッチパネルディスプレイ接続用15pin FFCコネクタ。
+Raspberry-pi標準のタッチパネルディスプレイ接続用15pin DSIコネクタ。
 
 ### 1-13. microSDスロット
 ![13](/Image/Board_pic/cm3mb3_13.png)
