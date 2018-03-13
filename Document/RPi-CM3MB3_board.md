@@ -50,9 +50,6 @@ Raspberry-pi標準のCAMERAモジュール接続用15pin CSIコネクタ。
 
 緑点灯：電源ON。<br>
 緑点滅(0.3秒間隔)：シャットダウン中。<br>
-緑点滅(1.0秒間隔)：充電中(電源ON時)。<br>
-赤点灯：バッテリー要充電。<br>
-赤点滅(1.0秒間隔)：充電中(電源OFF時)。<br>
 
 ### 1-6. 内部配線用 LED接続7PIN ZHコネクタ
 ![6](/Image/Board_pic/cm3mb3_06.jpg)
@@ -130,7 +127,7 @@ Raspberry-pi標準のタッチパネルディスプレイ接続用15pin DSIコ�
 ![13](/Image/Board_pic/cm3mb3_13.jpg)
 
 Push-Push式 microSDスロット。<br>
-※ComputeModule使用時のみシステムドライブとして使用可能。
+※Compute Module Lite (eMMCなしモデル)使用時のみシステムドライブとして使用可能。
 
 ### 1-14. HDMI Standard Aコネクタ
 ![14](/Image/Board_pic/cm3mb3_14.jpg)
