@@ -127,7 +127,7 @@ Raspberry-pi標準のタッチパネルディスプレイ接続用15pin DSIコ�
 ![13](/Image/Board_pic/cm3mb3_13.jpg)
 
 Push-Push式 microSDスロット。<br>
-※Compute Module Lite (eMMCなしモデル)使用時のみシステムドライブとして使用可能。
+※Compute Module 3 Lite (eMMCなしモデル)使用時のみシステムドライブとして使用可能。
 
 ### 1-14. HDMI Standard Aコネクタ
 ![14](/Image/Board_pic/cm3mb3_14.jpg)
@@ -172,5 +172,6 @@ USB2.0ホストコネクタ。(2ポート)
 ![21](/Image/Board_pic/cm3mb3_21.jpg)
 
 Raspberry Pi Compute Module 3/ 3 Lite 装着用ソケット。<br>
-※RPi-CM3MB3にはCM3Liteが付属していません。<br>
-※RPi-CM3MB3LにはCM3Liteが付属しています。(未装着)
+※RPi-CM3MB3にはCompute Module 3/ 3 Liteは付属していません。<br>
+※RPi-CM3MB3LにはCompute Module 3 Liteが付属しています。(未装着)
+
