@@ -1,4 +1,4 @@
-## RPi-CM3MB2 / RPi-CM3MB2Lのハードウェア仕様
+## RPi-CM3MB3 / RPi-CM3MB3Lのハードウェア仕様
 
 |||
 |:-----|:-----|
