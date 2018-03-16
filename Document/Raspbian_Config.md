@@ -137,57 +137,51 @@ OSシャットダウン時にシャットダウンLEDが点灯し、電源LEDが
 
 ![SDWN_01](/Image/SDWN_pic/SDWN_01.png)
 
-プログラムを保存するディレクトリーを作成し移動します。(例ではratocを作成)
-$ mkdir ratoc
-$ cd ratoc
+プログラムを保存するディレクトリーを作成し移動します。(例ではratocを作成)  
+mkdir ratoc  
+cd ratoc  
 
 ![SDWN_02](/Image/SDWN_pic/SDWN_02.png)
 
-スクリプトファイル"shutd_btn.py"をGitHubからダウンロードします。
-~/ratoc $ sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.py
+スクリプトファイル"shutd_btn.py"をGitHubからダウンロードします。  
+sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.py
 
 ![SDWN_03](/Image/SDWN_pic/SDWN_03.png)
 
-スクリプトファイルを実行可能にします。
-~/ratoc/ $ sudo chmod 755 ~/ratoc/shutd_btn.py
+スクリプトファイルを実行可能にします。  
+sudo chmod 755 ~/ratoc/shutd_btn.py
 
 ![SDWN_04](/Image/SDWN_pic/SDWN_04.png)
 
 #### (3-2) サービスファイルのダウンロードと開始  
 
-サービスファイル"shutd_btn.service"をGitHubからダウンロードします。
-
-~/ratoc/ $ sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.service"
+サービスファイル"shutd_btn.service"をGitHubからダウンロードします。  
+sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.service"
 
 ![SDWN_05](/Image/SDWN_pic/SDWN_05.png)
 
-サービスを/etc/systemd/systemへコピーします。
-
-~/ratoc $ sudo cp shutd_btn.service /etc/systemd/system/shutd_btn.service
+サービスを/etc/systemd/systemへコピーします。  
+sudo cp shutd_btn.service /etc/systemd/system/shutd_btn.service
 
 ![SDWN_06](/Image/SDWN_pic/SDWN_06.png)
 
-サービスを開始します。
-
-$ sudo systemctl start shutd_btn.service
+サービスを開始します。  
+sudo systemctl start shutd_btn.service
 
 ![SDWN_07](/Image/SDWN_pic/SDWN_07.png)
 
-システム起動時にサービスが自動で実行されるように設定します。
+システム起動時にサービスが自動で実行されるように設定します。  
+sudo systemctl enable shutd_btn.service  
 
-$ sudo systemctl enable shutd_btn.service
-
-$ sudo systemctl disable shutd_btn.service
-で自動での実行が向こうとなります。
+sudo systemctl disable shutd_btn.service  
+で自動での実行が無効となります。
 
 ![SDWN_08](/Image/SDWN_pic/SDWN_08.png)
 
-サービスが実行されているかを確認します。
-
-$ sudo systemctl status shutd_btn.service
+サービスが実行されているかを確認します。  
+sudo systemctl status shutd_btn.service
 
 以下の表示となっていれば正常に実行されています。
 
 ![SDWN_09](/Image/SDWN_pic/SDWN_09.png)
-
 
