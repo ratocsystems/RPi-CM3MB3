@@ -5,6 +5,7 @@
 
 1) ローカライゼーションの設定  
 2) RTCとLEDの設定
+3) シャットダウンスクリプトの登録 
 
 ### 1. ローカライゼーションの設定  
 「言語」「タイムゾーン」「キーボード」を日本設定に変更します。  
@@ -81,7 +82,7 @@ sudo nano /boot/config.txt と入力しファイルを編集します。
 
 dtoverlay=pi3-act-led,gpio=16  
 dtoverlay=gpio-poweroff,gpiopin=5  
-dtoverlay=i2c-rtc,ds3231  
+dtoverlay=i2c-rtc,mcp7941x  
 
 ![RTC_05](/Image/RTC_LED_pic/RTC_05.png)
 
@@ -124,4 +125,69 @@ sudo nano /lib/udev/hwclock-set と入力しファイルを編集します。
 ファイルアクセスすると、アクセスLEDが点滅します。
 
 [シャットダウンLEDの動作確認]  
-OSシャットダウン時にシャットダウンLEDが点灯し、電源LEDが14秒間点滅後に電源OFFとなります。
+OSシャットダウン時にシャットダウンLEDが点灯し、電源LEDが14秒間点滅後に電源OFFとなります。  
+
+### 3. シャットダウンスクリプトの登録  
+
+電源ボタンを３秒以上長押しすると、システムがシャットダウンするPythonスクリプトを登録します。  
+
+#### (3-1) スクリプトファイルのダウンロードと有効化  
+
+ターミナルを起動します。
+
+![SDWN_01](/Image/SDWN_pic/SDWN_01.png)
+
+プログラムを保存するディレクトリーを作成し移動します。(例ではratocを作成)
+$ mkdir ratoc
+$ cd ratoc
+
+![SDWN_02](/Image/SDWN_pic/SDWN_02.png)
+
+スクリプトファイル"shutd_btn.py"をGitHubからダウンロードします。
+~/ratoc $ sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.py
+
+![SDWN_03](/Image/SDWN_pic/SDWN_03.png)
+
+スクリプトファイルを実行可能にします。
+~/ratoc/ $ sudo chmod 755 ~/ratoc/shutd_btn.py
+
+![SDWN_04](/Image/SDWN_pic/SDWN_04.png)
+
+#### (3-2) サービスファイルのダウンロードと開始  
+
+サービスファイル"shutd_btn.service"をGitHubからダウンロードします。
+
+~/ratoc/ $ sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.service"
+
+![SDWN_05](/Image/SDWN_pic/SDWN_05.png)
+
+サービスを/etc/systemd/systemへコピーします。
+
+~/ratoc $ sudo cp shutd_btn.service /etc/systemd/system/shutd_btn.service
+
+![SDWN_06](/Image/SDWN_pic/SDWN_06.png)
+
+サービスを開始します。
+
+$ sudo systemctl start shutd_btn.service
+
+![SDWN_07](/Image/SDWN_pic/SDWN_07.png)
+
+システム起動時にサービスが自動で実行されるように設定します。
+
+$ sudo systemctl enable shutd_btn.service
+
+$ sudo systemctl disable shutd_btn.service
+で自動での実行が向こうとなります。
+
+![SDWN_08](/Image/SDWN_pic/SDWN_08.png)
+
+サービスが実行されているかを確認します。
+
+$ sudo systemctl status shutd_btn.service
+
+以下の表示となっていれば正常に実行されています。
+
+![SDWN_09](/Image/SDWN_pic/SDWN_09.png)
+
+

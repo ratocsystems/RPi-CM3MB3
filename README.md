@@ -33,6 +33,7 @@
   * RTCとLEDの設定    
   * RTCの動作確認  
   * LEDの動作確認  
+  * シャットダウンスクリプトの登録  
 
 * [ハードウェア仕様](./Document/RPi-CM3MB3_spec.md)
     
