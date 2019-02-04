@@ -185,3 +185,18 @@ sudo systemctl status shutd_btn.service
 
 ![SDWN_09](/Image/SDWN_pic/SDWN_09.png)
 
+### 4. CAMERAとDISPLAYの有効化(15pin)  
+
+15pinコネクタに接続したCAMERAおよびDISPLAYを使用するための設定について説明します。  
+※ dt-blob.binファイルを直接microSDの/bootにコピーするか、または以下の手順にてターミナルよりダウンロード・コピーを行ないます。  
+
+#### dt-blob.binファイルのダウンロードとコピー  
+
+ターミナルを起動します。
+
+![SDWN_01](/Image/SDWN_pic/SDWN_01.png)
+
+設定ファイル" dt-blob.bin"をGitHubからダウンロードし、boot内にコピーします。  
+sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/dts/dt-blob.bin -O /boot/dt-blob.bin
+
+![15pin_01](/Image/15pin_pic/01.png)

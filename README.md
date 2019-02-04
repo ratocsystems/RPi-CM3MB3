@@ -34,6 +34,7 @@
   * RTCの動作確認  
   * LEDの動作確認  
   * シャットダウンスクリプトの登録  
-
+  * CAMERAとDISPLAYの有効化(15pin)  
+  
 * [ハードウェア仕様](./Document/RPi-CM3MB3_spec.md)
     
