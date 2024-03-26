@@ -12,8 +12,7 @@
  - CR2032電池（RTCバックアップ用）  
  - 補足文書 x1 
  - 保証書 x1 
- - Raspberry Pi Compute Module 3 Lite (RPi-CM3MB3Lのみ)
- 
+ - Raspberry Pi Compute Module 3 Lite (RPi-CM3MB3Lのみ)<br>【※2024 年2 月以降出荷品はeMMC32GB 搭載品をバンドル】 
  ---  
  
 ### **各項目については以下のリンクをご参照ください** 
