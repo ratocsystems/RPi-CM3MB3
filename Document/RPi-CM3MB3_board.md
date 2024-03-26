@@ -173,5 +173,6 @@ USB2.0ホストコネクタ。(2ポート)
 
 Raspberry Pi Compute Module 3/ 3 Lite 装着用ソケット。<br>
 ※RPi-CM3MB3にはCompute Module 3/ 3 Liteは付属していません。<br>
-※RPi-CM3MB3LにはCompute Module 3 Liteが付属しています。(未装着)
+※RPi-CM3MB3LにはCompute Module 3 Liteが付属しています。<br>【※2024 年2 月以降出荷品はeMMC32GB 搭載品
+をバンドル】(未装着)
 
