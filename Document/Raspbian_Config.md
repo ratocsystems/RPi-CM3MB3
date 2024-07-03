@@ -76,6 +76,10 @@ Variant: Japanese(OADG 109A)
 
 sudo nano /boot/config.txt と入力しファイルを編集します。
 
+**(注意)2023年10月リリースのRaspberry Pi OS (bookwarm) からconfig.txtの保存フォルダが「/boot」から「/boot/firmware」に移動しました。**
+
+これ以降のRaspberry Pi OSを使用する場合は、「sudo nano /boot/firmware/config.txt」と入力してください。
+
 ![RTC_04](/Image/RTC_LED_pic/RTC_04.png)
 
 以下の3行を追記し、キーボードの[Ctrl+O]を押します。
