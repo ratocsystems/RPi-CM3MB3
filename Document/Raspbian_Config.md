@@ -118,9 +118,8 @@ sudo nano /lib/udev/hwclock-set と入力しファイルを編集します。
 "sudo hwclock -r" :RTCの時刻読み出し  
 "sudo hwclock -w" :システムの時間をRTCへ書き込む  
 "sudo hwclock -s" :RTCの時間をシステムへ書き込む(スタートアップ時に実行される)  
-"sudo hwclock -c" :RTCから10秒間隔で時刻読み出し(Ctrl+Cで停止)
 
-![RTC_10](/Image/RTC_LED_pic/RTC_10.png)
+![RTC_10-1](/Image/RTC_LED_pic/RTC_10-1.png)
 
 
 #### (2-3) LEDの動作確認  
@@ -141,7 +140,7 @@ OSシャットダウン時にシャットダウンLEDが点灯し、電源LEDが
 
 ![SDWN_01](/Image/SDWN_pic/SDWN_01.png)
 
-プログラムを保存するディレクトリーを作成し移動します。(例ではratocを作成)  
+プログラムを保存するディレクトリーを作成し移動します。(例ではユーザー名がpi、ratocを作成)  
 mkdir ratoc  
 cd ratoc  
 
@@ -160,7 +159,7 @@ sudo chmod 755 ~/ratoc/shutd_btn.py
 #### (3-2) サービスファイルのダウンロードと開始  
 
 サービスファイル"shutd_btn.service"をGitHubからダウンロードします。  
-sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.service"
+sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/shutdown/shutd_btn.service
 
 ![SDWN_05](/Image/SDWN_pic/SDWN_05.png)
 
@@ -193,6 +192,7 @@ sudo systemctl status shutd_btn.service
 
 15pinコネクタに接続したCAMERAおよびDISPLAYを使用するための設定について説明します。  
 ※ dt-blob.binファイルを直接microSDの/bootにコピーするか、または以下の手順にてターミナルよりダウンロード・コピーを行ないます。  
+bookworm以降の場合、コピー先は/boot/firmwareとなります。
 
 #### dt-blob.binファイルのダウンロードとコピー  
 
@@ -204,3 +204,8 @@ sudo systemctl status shutd_btn.service
 sudo wget https://github.com/ratocsystems/rpi-cm3/raw/master/dts/dt-blob.bin -O /boot/dt-blob.bin
 
 ![15pin_01](/Image/15pin_pic/01.png)
+
+※ bookworm以降の場合、sudo nano /boot/firmware/config.txt を実行し以下の設定を追加・保存してOSを再起動してください。  
+dtoverlay=cm-swap-i2c0  
+dtparam=cam1_reg  
+dtparam=cam1_reg_gpio=41 
